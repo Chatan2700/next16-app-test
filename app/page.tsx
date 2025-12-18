@@ -6,6 +6,7 @@ import ControlledInput from "@/components/ControlledInput";
 import TextInput from "@/components/TextInput";
 import Toggle from "@/components/Toggle";
 import TypesPractice from "@/components/TypesPractice";
+import OptionalProp from "@/components/OptionalProp";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
         {/* <ControlledInput /> */}
         {/* <TextInput /> */}
         {/* <Toggle /> */}
-        <TypesPractice title="Hello Types" count={5} />
+        {/* <TypesPractice title="Hello Types" count={5} /> */}
+        {/* <OptionalProp message="Hello" variant="success" /> */}
+        
       </div>
     </div>
   );
