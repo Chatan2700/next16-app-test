@@ -5,6 +5,7 @@ import Counter from "@/components/Counter";
 import ControlledInput from "@/components/ControlledInput";
 import TextInput from "@/components/TextInput";
 import Toggle from "@/components/Toggle";
+import TypesPractice from "@/components/TypesPractice";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
         {/* <Counter /> */}
         {/* <ControlledInput /> */}
         {/* <TextInput /> */}
-        <Toggle />
+        {/* <Toggle /> */}
+        <TypesPractice title="Hello Types" count={5} />
       </div>
     </div>
   );
