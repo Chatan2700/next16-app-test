@@ -2,6 +2,9 @@
 
 import ButtonTest from "@/components/ButtonTest";
 import Counter from "@/components/Counter";
+import ControlledInput from "@/components/ControlledInput";
+import TextInput from "@/components/TextInput";
+import Toggle from "@/components/Toggle";
 
 export default function Home() {
   return (
@@ -9,7 +12,10 @@ export default function Home() {
       <div>Hello NextJS</div>
       <div>
         {/* <ButtonTest /> */}
-        <Counter />
+        {/* <Counter /> */}
+        {/* <ControlledInput /> */}
+        {/* <TextInput /> */}
+        <Toggle />
       </div>
     </div>
   );
