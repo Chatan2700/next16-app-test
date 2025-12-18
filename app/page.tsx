@@ -7,6 +7,7 @@ import TextInput from "@/components/TextInput";
 import Toggle from "@/components/Toggle";
 import TypesPractice from "@/components/TypesPractice";
 import OptionalProp from "@/components/OptionalProp";
+import Loader from "@/components/Loader";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
         {/* <Toggle /> */}
         {/* <TypesPractice title="Hello Types" count={5} /> */}
         {/* <OptionalProp message="Hello" variant="success" /> */}
-        
+        <Loader />
       </div>
     </div>
   );
