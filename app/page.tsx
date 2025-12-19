@@ -9,6 +9,7 @@ import TypesPractice from "@/components/TypesPractice";
 import OptionalProp from "@/components/OptionalProp";
 import Loader from "@/components/Loader";
 import ErrorHandling from "@/components/ErrorHandling";
+import MapPractice from "@/components/MapPractice";
 
 export default function Home() {
   return (
@@ -23,7 +24,8 @@ export default function Home() {
         {/* <TypesPractice title="Hello Types" count={5} /> */}
         {/* <OptionalProp message="Hello" variant="success" /> */}
         {/* <Loader /> */}
-        <ErrorHandling />
+        {/* <ErrorHandling /> */}
+        <MapPractice />
       </div>
     </div>
   );
