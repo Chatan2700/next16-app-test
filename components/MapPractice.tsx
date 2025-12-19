@@ -1,6 +1,18 @@
 import React from "react";
 
-const cities = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
+type Weather = {
+  id: number;
+  city: string;
+  temperature: number;
+};
+
+const weather = [
+  { id: 1, city: "New York", temperature: 25 },
+  { id: 2, city: "Los Angeles", temperature: 30 },
+  { id: 3, city: "Chicago", temperature: 20 },
+  { id: 4, city: "Houston", temperature: 28 },
+  { id: 5, city: "Philadelphia", temperature: 22 },
+];
 
 const MapPractice = () => {
   return (
@@ -9,9 +21,14 @@ const MapPractice = () => {
         <p className="mt-4">Mapping Practice</p>
 
         <ul>
-          {cities.map((city) => (
-            <li key={city}>{city}</li>
-          ))}
+          {/* // Destructure the properties directly in the map function */}
+          {weather.map(({ id, city, temperature }: Weather) => {
+            return (
+              <li key={id}>
+                City: ${city}, Temperature: ${temperature}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
