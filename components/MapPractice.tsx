@@ -15,6 +15,8 @@ const weather = [
 ];
 
 const MapPractice = () => {
+  const hotCities = weather.filter((item) => item.temperature > 25);
+
   return (
     <div>
       <div className="flex flex-col items-center justify-center gap-4">
@@ -22,7 +24,7 @@ const MapPractice = () => {
 
         <ul>
           {/* // Destructure the properties directly in the map function */}
-          {weather.map(({ id, city, temperature }: Weather) => {
+          {hotCities.map(({ id, city, temperature }: Weather) => {
             return (
               // Add classname based on a contion
               <li key={id} className={temperature > 25 ? "text-red-500" : "text-blue-500"}>
