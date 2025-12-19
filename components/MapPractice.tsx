@@ -1,12 +1,7 @@
 import React from "react";
+import { Weather } from "@/lib/types";
 
-type Weather = {
-  id: number;
-  city: string;
-  temperature: number;
-};
-
-const weather = [
+const weather: Weather[] = [
   { id: 1, city: "New York", temperature: 26 },
   { id: 2, city: "Los Angeles", temperature: 30 },
   { id: 3, city: "Chicago", temperature: 20 },
@@ -26,7 +21,7 @@ const MapPractice = () => {
 
         <ul>
           {/* // Destructure the properties directly in the map function */}
-          {hotCities.map(({ id, city, temperature }: Weather) => {
+          {hotCities.map(({ id, city, temperature }) => {
             return (
               // Add classname based on a contion
               <li key={id} className={temperature > 25 ? "text-red-500" : "text-blue-500"}>
