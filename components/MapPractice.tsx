@@ -16,7 +16,7 @@ const MapPractice = () => {
 
   const handleAddCity = () => {
     console.log("Add City");
-    const newCity: Weather = { id: Date.now(), city: "Miami", temperature: 25 };
+    const newCity = { id: Date.now(), city: "Miami", temperature: 25 };
     setCities([...cities, newCity]);
   };
 
