@@ -25,7 +25,7 @@ const MapPractice = () => {
           {weather.map(({ id, city, temperature }: Weather) => {
             return (
               <li key={id}>
-                City: ${city}, Temperature: ${temperature}
+                City: {city}, Temperature: {temperature}
               </li>
             );
           })}
