@@ -7,7 +7,7 @@ type Weather = {
 };
 
 const weather = [
-  { id: 1, city: "New York", temperature: 25 },
+  { id: 1, city: "New York", temperature: 26 },
   { id: 2, city: "Los Angeles", temperature: 30 },
   { id: 3, city: "Chicago", temperature: 20 },
   { id: 4, city: "Houston", temperature: 28 },
@@ -15,12 +15,14 @@ const weather = [
 ];
 
 const MapPractice = () => {
-  const hotCities = weather.filter((item) => item.temperature > 25);
+  const hotCities = weather.filter((item) => item.temperature > 35);
 
   return (
     <div>
       <div className="flex flex-col items-center justify-center gap-4">
         <p className="mt-4">Mapping Practice</p>
+
+        {hotCities.length === 0 && <p>No hot cities found.</p>}
 
         <ul>
           {/* // Destructure the properties directly in the map function */}
