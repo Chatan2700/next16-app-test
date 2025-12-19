@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Weather } from "@/lib/types";
 
 const weather: Weather[] = [
@@ -10,18 +10,33 @@ const weather: Weather[] = [
 ];
 
 const MapPractice = () => {
-  const hotCities = weather.filter((item) => item.temperature > 35);
+  // const hotCities = weather.filter((item) => item.temperature > 35);
+
+  const [cities, setCities] = useState(weather);
+
+  const handleAddCity = () => {
+    console.log("Add City");
+    const newCity: Weather = { id: Date.now(), city: "Miami", temperature: 25 };
+    setCities([...cities, newCity]);
+  };
 
   return (
     <div>
       <div className="flex flex-col items-center justify-center gap-4">
         <p className="mt-4">Mapping Practice</p>
 
-        {hotCities.length === 0 && <p>No hot cities found.</p>}
+        {/* {hotCities.length === 0 && <p>No hot cities found.</p>} */}
+
+        <button
+          className="px-4 py-2 rounded-lg font-medium bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 transition-colors hover:bg-zinc-400 active:scale-95 shadow-sm ring-offset-2 flex gap-1 items-center justify-center"
+          onClick={handleAddCity}
+        >
+          Add City
+        </button>
 
         <ul>
           {/* // Destructure the properties directly in the map function */}
-          {hotCities.map(({ id, city, temperature }) => {
+          {cities.map(({ id, city, temperature }) => {
             return (
               // Add classname based on a contion
               <li key={id} className={temperature > 25 ? "text-red-500" : "text-blue-500"}>
